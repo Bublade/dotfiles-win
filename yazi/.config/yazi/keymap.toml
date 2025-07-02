@@ -1,0 +1,7 @@
+[mgr]
+prepend_keymap = [
+	{ on = "<Enter>", run = "enter", desc = "Enter the child directory" },
+	{ on = "-", run = "leave", desc = "Back to the parent directory" },
+	{ on = "_", run = "link", desc = "Symlink the absolute path of yanked files" },
+	# { on = "_", run = "link --relative", desc = "Symlink the relative path of yanked files" },
+]
