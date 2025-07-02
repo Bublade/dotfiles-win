@@ -1,0 +1,93 @@
+source ~/.vimrc
+
+"" --- Enable IdeaVim plugins https://jb.gg/ideavim-plugins
+Plug 'machakann/vim-highlightedyank'
+Plug 'tpope/vim-commentary'
+Plug 'easymotion/vim-easymotion'
+Plug 'dbakker/vim-paragraph-motion'
+
+let currentmapleader = mapleader
+
+"" IDE tool functions
+let mapleader= '\'
+
+map <leader>d <Action>(Debug)
+map <leader>r <Action>(Run)
+map <leader>s <Action>(Stop)
+map <leader>b <Action>(ToggleLineBreakpoint)
+map <leader>t <Action>(RiderUnitTestRunSolutionAction)
+map <leader>ct <Action>(RiderUnitTestRunContextAction)
+map <leader>R <Action>(Replace)
+
+map <leader>ir <Action>(IdeaVim.ReloadVimRc.reload)
+
+map <leader>db <Action>(ActivateDatabaseToolWindow)
+map <leader>bs <Action>(BuildWholeSolutionAction)
+map <leader>cbs <Action>(RebuildSolutionAction)
+
+map <leader><leader>r <Action>(HTTPClient.RunAll)
+
+"" File Navigation
+let mapleader = currentmapleader
+
+map - <Action>(ActivateProjectToolWindow)
+map <leader>ff <Action>(SelectInProjectView)
+map <leader>pf <Action>(GotoClass)
+map <leader>pF <Action>(GotoFile)
+map <leader>pv <Action>(ShowNavBar)
+
+"" lsp functions
+map gd <Action>(GotoDeclaration)
+map K <Action>(ShowHoverInfo)
+map gi <Action>(ReSharperGotoImplementation)
+map <space>D <Action>(GotoTypeDeclaration)
+map <space>rn <Action>(RenameElement)
+map <space>ca <Action>(ShowIntentionActions)
+map gr <Action>(FindUsages)
+
+"" Diagnostic keymaps
+nmap [d <Action>(GotoPreviousError)
+nmap ]d <Action>(GotoNextError)
+nmap [q <Action>(PreviousOccurence)
+nmap ]q <Action>(NextOccurence)
+nmap <leader>e <Action>(ShowErrorDescription)
+nmap <leader>q <Action>(ShowIntentionActions)
+
+set ideajoin
+set easymotion
+set notimeout
+set quickscope
+
+sethandler <C-2> a:vim
+sethandler <C-S-2> a:vim
+sethandler <C-6> a:vim
+sethandler <C-S-6> a:vim
+sethandler <C-A> a:vim
+sethandler <C-B> a:vim
+sethandler <C-C> a:vim
+sethandler <C-D> a:vim
+sethandler <C-E> a:vim
+sethandler <C-F> a:vim
+sethandler <C-G> a:vim
+sethandler <C-H> a:vim
+sethandler <C-I> a:vim
+sethandler <C-J> a:vim
+sethandler <A-J> a:vim
+sethandler <C-K> a:vim
+sethandler <C-L> a:vim
+sethandler <C-M> a:vim
+sethandler <C-N> a:vim
+sethandler <C-O> a:vim
+sethandler <C-P> a:vim
+sethandler <C-Q> a:vim
+sethandler <C-R> a:vim
+sethandler <C-S> a:vim
+sethandler <C-T> a:vim
+sethandler <C-U> a:vim
+sethandler <C-V> a:vim
+sethandler <C-W> a:vim
+sethandler <C-X> a:vim
+sethandler <C-Y> a:vim
+sethandler <C-[> a:vim
+sethandler <C-\> a:vim
+sethandler <C-]> a:vim

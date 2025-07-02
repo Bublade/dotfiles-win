@@ -1,0 +1,158 @@
+/**
+ * Import the Nerdfonts icon font.
+ * Ref https://www.nerdfonts.com/cheat-sheet for a cheatsheet of available Nerdfonts icons.
+ */
+@import 'https://www.nerdfonts.com/assets/css/webfont.css';
+
+:root {
+    --base: #1b1f26;
+    --surface: #242933;
+    --text: #BBC3D4;
+    --text_dim: #C0C8D8;
+    --black_base: #191D24;
+    --black_bright: #1E222A;
+    --black_dim: #222630;
+    --gray_base: #2E3440;
+    --gray_bright: #3B4252;
+    --gray_dim: #434C5E;
+    --gray_alt1: #4C566A;
+    --gray_alt2: #60728A;
+    --white_base: #D8DEE9;
+    --white_bright: #E5E9F0;
+    --white_dim: #ECEFF4;
+    --blue_base: #5E81AC;
+    --blue_bright: #81A1C1;
+    --blue_dim: #88C0D0;
+    --cyan_base: #8FBCBB;
+    --cyan_bright: #9FC6C5;
+    --cyan_dim: #80B3B2;
+    --red_base: #BF616A;
+    --red_bright: #C5727A;
+    --red_dim: #B74E58;
+    --orange_base: #D08770;
+    --orange_bright: #D79784;
+    --orange_dim: #CB775D;
+    --yellow_base: #EBCB8B;
+    --yellow_bright: #EFD49F;
+    --yellow_dim: #E7C173;
+    --green_base: #A3BE8C;
+    --green_bright: #B1C89D;
+    --green_dim: #97B67C;
+    --magenta_base: #B48EAD;
+    --brightmagenta_: #BE9DB8;
+    --magenta_dim: #A97EA1;
+}
+
+i {
+    color: rgb(115 130 175 / 95%);
+    margin-right: 7px;
+}
+
+body {
+    color: var(--text); /*rgb(255 255 255 / 90%);*/
+    font-family: 'JetBrains Mono', ui-monospace, monospace;
+    font-size: 12px;
+    overflow: hidden;
+}
+
+html,
+body,
+#root {
+    height: 100%;
+}
+
+#root {
+    border-bottom: 1px solid rgb(255 255 255 / 5%);
+    background: var(--black_base); /*linear-gradient(rgb(0 0 0 / 90%), rgb(5 2 20 / 85%));*/
+}
+
+.app {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    align-items: center;
+    height: 100%;
+    padding: 4px 1.5vw;
+}
+
+.left,
+.center,
+.right {
+    display: flex;
+    align-items: center;
+}
+
+.center {
+    justify-self: center;
+}
+
+.right {
+    justify-self: end;
+}
+
+.logo,
+.binding-mode,
+.tiling-direction,
+.network,
+.memory,
+.cpu,
+.battery {
+    margin-right: 20px;
+}
+
+.workspaces {
+    display: flex;
+    align-items: center;
+}
+
+.workspaces i.nf {
+    color: inherit;
+}
+
+.workspace {
+    background: rgb(255 255 255 / 5%);
+    margin-right: 4px;
+    padding: 4px 8px;
+    color: inherit;
+    border: none;
+    border-radius: 2px;
+    cursor: pointer;
+
+    &.displayed {
+        background: rgb(255 255 255 / 15%);
+    }
+
+    &.focused,
+    &:hover {
+        background: var(--gray_base)
+    }
+}
+
+.binding-mode,
+.tiling-direction {
+    background: rgb(255 255 255 / 15%);
+    color: rgb(255 255 255 / 90%);
+    border-radius: 2px;
+    line-height: 1;
+    padding: 4px 8px;
+    border: 0;
+    cursor: pointer;
+}
+
+.binding-mode {
+    margin-right: 4px;
+}
+
+.cpu .high-usage {
+    color: #900029;
+}
+
+.battery {
+    position: relative;
+}
+
+.battery .charging-icon {
+    position: absolute;
+    font-size: 7px;
+    left: -8px;
+    top: 3px;
+}

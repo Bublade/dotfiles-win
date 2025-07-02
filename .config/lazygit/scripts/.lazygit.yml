@@ -1,0 +1,18 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/jesseduffield/lazygit/master/schema/config.json
+gui:
+  authorColors:
+    'my-author-name': 'cyan'
+    '*': 'default'
+customCommands:
+  - key: 'N'
+    description: "Create branch from jira issue"
+    command: 'create_switch_jira_issue {{.Form.Issue | quote}}'
+    context: 'localBranches, remoteBranches'
+    prompts:
+      - type: 'input'
+        title: 'Which Issue?'
+        key: 'Issue'
+        suggestions:
+          command: jira_branches
+
+
